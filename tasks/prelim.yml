@@ -1,7 +1,7 @@
 ---
 - name: "ensure audit daemon is installed"
   package:
-    name: "{{ auditd_package[ansible_os_family] }}"
+    name: "{{ auditd_package[ansible_os_family.stdout_lines | to_yaml ] }}"
     state: present
   notify: auditd restart
   tags:
