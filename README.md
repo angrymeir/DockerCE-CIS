@@ -1,3 +1,5 @@
+# WARNING: This repository has been tailored to my needs of automatically hardening docker on debian based systems in a jenkins pipeline. If you want to get the latest updates and ensure CIS compliance please have a look at the [original source](https://github.com/florianutz/DockerCE-CIS) of the repository!
+
 Docker CE CIS Hardening
 =========
 
