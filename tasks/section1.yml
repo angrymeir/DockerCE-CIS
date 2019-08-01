@@ -41,7 +41,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /usr/bin/docker -k docker"
   notify: load audit rules
   tags:
@@ -53,7 +53,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /var/lib/docker -k docker"
   notify: load audit rules
   tags:
@@ -65,7 +65,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /etc/docker -k docker"
   notify: load audit rules
   tags:
@@ -77,7 +77,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /lib/systemd/system/docker.service -k docker"
   notify: load audit rules
   tags:
@@ -89,7 +89,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /lib/systemd/system/docker.socket -k docker"
   notify: load audit rules
   tags:
@@ -101,7 +101,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /etc/default/docker -k docker"
   notify: load audit rules
   tags:
@@ -113,7 +113,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /etc/docker/daemon.json -k docker"
   notify: load audit rules
   tags:
@@ -125,7 +125,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /usr/bin/docker-containerd -k docker"
   notify: load audit rules
   tags:
@@ -137,7 +137,7 @@
   lineinfile:
     state: present
     create: yes
-    dest: "{{ auditd_config_file[ansible_os_family] }}"
+    dest: "{{ auditd_config_file }}"
     line: "-w /usr/bin/docker-runc -k docker"
   notify: load audit rules
   tags:
