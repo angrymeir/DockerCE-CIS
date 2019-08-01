@@ -1,7 +1,7 @@
 ---
 - name: "ensure audit daemon is installed"
   package:
-    name: "{{ auditd_package[item] }}"
+    name: "{{ auditd_package['Debian'] }}"
     state: present
   with_items: "{{ ansible_os_family }}"
   notify: auditd restart
